@@ -2,16 +2,16 @@
             
             
       function playRound(playerSelection, computerSelection){
-        if(playerSelection.toLowerCase() === 'rock' && computerSelection[computerPlay] === 'scissors' ||
+        if(playerSelection.toLowerCase() ==='rock' && computerSelection[computerPlay] === 'scissors' ||
         playerSelection.toLowerCase() === 'paper' && computerSelection[computerPlay] === 'rock' || 
         playerSelection.toLowerCase() === 'scissors' && computerSelection[computerPlay] === 'paper'){
             playerScore++;
             return win;
 
         }
-        else if(computerSelection[computerPlay] === 'rock' && playerSelection.toLowerCase() === 'scissors' ||
-        computerSelection[computerPlay] === 'paper' && playerSelection.toLowerCase() === 'rock' ||
-        computerSelection[computerPlay] === 'scissors' && playerSelection === 'paper'){
+        else if(playerSelection.toLowerCase()=== 'rock' && computerSelection[computerPlay]=== 'paper' ||
+        playerSelection.toLowerCase() === 'scissors' && computerSelection[computerPlay]  === 'rock' ||
+        playerSelection.toLowerCase() === 'paper' && computerSelection[computerPlay]  === 'scissors'){
             computerScore++;
             return lose; 
 
@@ -49,8 +49,8 @@
              playerSelection = prompt("Enter = rock, paper or scissors");
             console.log("You choose " +playerSelection.toLowerCase());
 
-            let computerSelection = ['rock', 'paper', 'scissors'];
-            let computerPlay = Math.floor(Math.random()*computerSelection.length);
+            computerSelection = ['rock', 'paper', 'scissors'];
+            computerPlay = Math.floor(Math.random()*computerSelection.length);
       console.log("Computer choose " +computerPlay, computerSelection[computerPlay]);
 
      
@@ -68,6 +68,7 @@
       }
 
    console.log(game());
-   score = playerScore+computerScore+tieScore;
    console.log("Final score is " +playerScore+ " Wins " +computerScore+ " Loses " +tieScore+ " Draws.");
+   score = playerScore+computerScore+tieScore;
+   
    console.log("You reached "+score+ " rounds. GAME OVER!");   
