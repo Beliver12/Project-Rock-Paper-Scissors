@@ -1,22 +1,22 @@
 
-            
+          
             
       function playRound(playerSelection, computerSelection){
-        if(playerSelection.toLowerCase() ==='rock' && computerSelection[computerPlay] === 'scissors' ||
-        playerSelection.toLowerCase() === 'paper' && computerSelection[computerPlay] === 'rock' || 
-        playerSelection.toLowerCase() === 'scissors' && computerSelection[computerPlay] === 'paper'){
+        if(playerSelection.toLowerCase() ==='rock' && computerSelection === 'scissors' ||
+        playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock' || 
+        playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper'){
             playerScore++;
             return win;
 
         }
-        else if(playerSelection.toLowerCase()=== 'rock' && computerSelection[computerPlay]=== 'paper' ||
-        playerSelection.toLowerCase() === 'scissors' && computerSelection[computerPlay]  === 'rock' ||
-        playerSelection.toLowerCase() === 'paper' && computerSelection[computerPlay]  === 'scissors'){
+        else if(playerSelection.toLowerCase()=== 'rock' && computerSelection=== 'paper' ||
+        playerSelection.toLowerCase() === 'scissors' && computerSelection  === 'rock' ||
+        playerSelection.toLowerCase() === 'paper' && computerSelection  === 'scissors'){
             computerScore++;
             return lose; 
 
         }
-        else if(playerSelection.toLowerCase() === computerSelection[computerPlay]){
+        else if(playerSelection.toLowerCase() === computerSelection){
             tieScore++;
             return tie;
         }
@@ -27,9 +27,9 @@
       let playerSelection = prompt("Enter = rock paper or scissors.");
       console.log("You choose " +playerSelection.toLowerCase());
 
-      let computerSelection = ['rock', 'paper', 'scissors'];
-      let computerPlay = Math.floor(Math.random()*computerSelection.length);
-      console.log("Computer choose " +computerPlay, computerSelection[computerPlay]);
+      let computerChoice = ['rock', 'paper', 'scissors'];
+   let computerSelection = computerChoice[Math.floor(Math.random()* computerChoice.length)];
+   console.log("Computer choose " +computerSelection);
 
       let playerScore = 0;
       let computerScore = 0;                     
@@ -49,10 +49,9 @@
              playerSelection = prompt("Enter = rock, paper or scissors");
             console.log("You choose " +playerSelection.toLowerCase());
 
-            computerSelection = ['rock', 'paper', 'scissors'];
-            computerPlay = Math.floor(Math.random()*computerSelection.length);
-      console.log("Computer choose " +computerPlay, computerSelection[computerPlay]);
-
+            let computerChoice = ['rock', 'paper', 'scissors'];
+            let computerSelection = computerChoice[Math.floor(Math.random()* computerChoice.length)];
+            console.log("Computer choose " +computerSelection);
      
       console.log(playRound(playerSelection, computerSelection));
       
