@@ -20,8 +20,8 @@ function playRound(playerSelection,computerSelection){
         return "NaN";
   }
 }
- playerSelection = prompt("Choose your sign.");
-console.log("Player selected:--- " +playerSelection.toLowerCase());
+ playerSelection = prompt("Choose your sign.").toLowerCase();
+console.log("Player selected:--- " +playerSelection);
 
 let computerChoice = ["rock", "paper", "scissors"];
 let computerSelection = computerChoice[Math.floor(Math.random()*computerChoice.length)];
@@ -43,8 +43,8 @@ function playGame(){
 
   for(let i =0; i<4; i++){
 
-    playerSelection = prompt("Choose your sign.");
-    console.log("Player selected:--- " +playerSelection.toLowerCase());
+    playerSelection = prompt("Choose your sign.").toLowerCase();
+    console.log("Player selected:--- " +playerSelection);
     
      computerChoice = ["rock", "paper", "scissors"];
      computerSelection = computerChoice[Math.floor(Math.random()*computerChoice.length)];
